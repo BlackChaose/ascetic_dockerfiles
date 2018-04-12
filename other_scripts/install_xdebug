@@ -3,6 +3,7 @@ apt-get update -y
 apt-get install php-dev -y
 apt-get install locate -y
 apt-get install wget -y
+apt-get install vim -y
 cd /usr/local/src
 wget -c -t 3 -O /usr/local/src/xdebug-2.5.4.tgz https://xdebug.org/files/xdebug-2.5.4.tgz
 tar xvfz xdebug-2.5.4.tgz
@@ -16,6 +17,7 @@ cd /usr/local/src
 #-------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # add to 10-xdebug.ini or php.ini
 #-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#create xdebug.ini
 echo 'zend_extension = /usr/local/lib/php/extensions/no-debug-non-zts-20131226/xdebug.so ' >> 10-xdebug.ini
 echo 'xdebug.remote_enable=1 ' >> 10-xdebug.ini
 echo 'xdebug.remote_port=9000' >> 10-xdebug.ini
@@ -23,3 +25,9 @@ echo 'xdebug.profiler_enable=1' >> 10-xdebug.ini
 echo 'xdebug.remote_connect_back=1' >> 10-xdebug.ini
 echo 'xdebug.idekey=PHPSTORM' >> 10-xdebug.ini
 echo 'xdebug.remote_autostart=1' >> 10-xdebug.ini
+#copy xdebug config 
+cp 10-xdebug.ini /usr/local/etc/php/conf.d
+cp /usr/src/php/php.ini-development /usr/local/etc/php/php.ini
+#restart apache2
+service apache2 restart
+#-------------------------------------------------------------------------------------------------------------------------------------------------------------------
