@@ -1,8 +1,6 @@
-#
-# NOTE: THIS DOCKERFILE IS GENERATED VIA "update.sh"
-#
-# PLEASE DO NOT EDIT IT DIRECTLY.
-#
+# based on the file "Dockerfile" from https://github.com/docker-library/php/blob/568145207f15ea0d521b09c9e8f9c65f772cee22/5.6/jessie/apache/Dockerfile
+# add xdebug and some soft (wget, vim)
+# delete section of clean src&tmp
 
 FROM debian:jessie
 
