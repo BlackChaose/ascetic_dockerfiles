@@ -208,11 +208,14 @@ RUN set -eux; \
 	php --version; 
 
 COPY docker-php-ext-* docker-php-entrypoint /usr/local/bin/
+COPY composer_install.sh  /usr/local/src/
 #---------------------------------- BlackChasose's adding steps -------------------------------------------------------
 RUN set -eux; \
 	cd /usr/local/src; \
 	touch bclog.log; \
 	echo "run BlackChasose's adding steps" >> bclog.log; \
+	chmod +x composer_install.sh; \
+	./composer_install.sh; \
 	wget -c -t 3 -O /usr/local/src/xdebug-2.5.4.tgz https://xdebug.org/files/xdebug-2.5.4.tgz; \
 	tar xvfz xdebug-2.5.4.tgz; \
 	cd xdebug-2.5.4; \
