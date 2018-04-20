@@ -1,0 +1,16 @@
+all:
+        hosts:
+                ansible-tst:
+                        ansible_port: <port to ssh on remote host>
+                        ansible_host: <ip || name server>
+                        ansible_user: <user for remote host>
+                        ansible_ssh_pass: <ssh password for remote host> 
+                        ansible_ssh_private_key_file: <path to private key for ssh. Public key already on remote host>
+                        ansible_become: yes 
+                tst-host:
+                        ansible_port: <port to ssh on remote host>
+                        ansible_host: <ip || name server>
+                        ansible_user: <user for remote host>
+                        ansible_ssh_pass: <ssh password for remote host> 
+                        ansible_ssh_private_key_file:<path to private key for ssh. Public key already on remote host>
+                        ansible_become: yes

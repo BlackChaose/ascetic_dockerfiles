@@ -1,0 +1,32 @@
+- hosts: tst-host
+  gather_facts: False
+  become: True 
+  tasks:
+        - name: update
+          raw: apt-get update -y
+        - name: install python              
+          raw: test -e /usr/bin/python || (apt -y update && apt install -y python) 
+        - name: install vim
+          raw: apt-get install -y vim 
+        - name: install gcc
+          raw: apt-get install -y gcc
+        - name: install g++
+          raw: apt-get install -y g++
+        - name: install make
+          raw: apt-get install -y make
+        - name: install wget
+          raw: apt-get install -y wget
+        - name: install curl
+          raw: apt-get install -y curl
+        - name: install ssh
+          raw: apt-get install -y ssh
+        - name: install openssl
+          raw: apt-get install -y openssl
+        - name: install git
+          raw: apt-get install -y git
+        - name: install locate
+          raw: apt-get install -y locate
+        - name: install links
+          raw: apt-get install -y links
+        - name: updatedb
+          raw: updatedb
