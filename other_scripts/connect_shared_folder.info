@@ -1,0 +1,23 @@
+For examle we have shared folder on server //192.168.0.10/share 
+with user login "penetrator" and user password "ohmygod!" and domain (MS AD) "dance"
+
+0)	 create folder for mounting
+	$ sudo mkdir /media/sharefolder
+
+1)	create file with pass, login and domain 
+
+	$ vim ~/.smbcredentials
+
+	and add  info, e.g.:
+	 
+	username=penetrator
+	password=ohmygod!
+	domain=dance
+
+2)  in /etc/fstab write
+
+//192.168.0./share /media/sharefolder cifs credentials=/home/<user name>/.smbcredentials,iocharset=utf8,sec=ntlmssp,users 0 0
+
+where <user name> - name of user's home directory.
+
+3) in network settings - if your company use MS ActiveDirectory - change DNS server to server AD (AD have DNS).
