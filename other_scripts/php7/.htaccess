@@ -1,0 +1,4 @@
+<FilesMatch "\.php">                                                                                                                                      
+SetHandler application/x-httpd-php7
+</FilesMatch> 
+AddType application/x-httpd-php7 .php
