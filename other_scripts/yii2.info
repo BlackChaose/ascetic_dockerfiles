@@ -1,0 +1,13 @@
+## Install ## 
+
+__Composer__
+
+curl -sS https://getcomposer.org/installer | php
+mv composer.phar /usr/local/bin/composer
+
+__Yii__
+
+composer create-project --prefer-dist yiisoft/yii2-app-basic basic
+
+или из (архива)[https://www.yiiframework.com/doc/guide/2.0/ru/start-installation]
+
