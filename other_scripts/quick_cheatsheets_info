@@ -4,7 +4,7 @@ scp sql_dump_file.sql  vagrant@127.0.0.1:/home/SQL_DUMPS/sql_dump_file.sql
 
 снять дамп базы с дев-сервера:
 
-mysqldump -P 3306 -h spring2.extech.ru -u kalitinns -p dwh_org > dwh_org_local.sql
+mysqldump -P 3306 -h <server> -u <user> -p <db_name> >  dump_DB_.sql
 
 загрузить дамп базы на виртуалку (находясь на виртуалке)
 
