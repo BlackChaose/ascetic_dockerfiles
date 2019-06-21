@@ -1,0 +1,3 @@
+# run from terminal by hands
+eval "$(ssh-agent -s)"
+ssh-add /home/kalitins/.ssh/4github/id_rsa

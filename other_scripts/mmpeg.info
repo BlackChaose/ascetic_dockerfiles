@@ -1,0 +1,18 @@
+Вырезать кусок mp3 файла
+	ffmpeg -i your_audio_file.mp3 -acodec copy -t 00:00:30 -ss 00:00:00 split_audio_file.mp3
+где	 -t <размер куска>
+	-ss <начало куска>
+-------------------------------------------------------------------------
+сграбить аудио из видео mp4
+
+ffmpeg -i <./src.mp4> <./output.mp3>
+
+-------------------------------------------------------------------------
+
+convert from mkv to mp4
+
+ffmpeg -i LostInTranslation.mkv -codec copy LostInTranslation.mp4
+
+==================
+нарезать кадры
+ffmpeg -i input.mov -r 0.25 output_%04d.png

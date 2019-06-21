@@ -1,0 +1,56 @@
+залить файл на виртуалку:
+
+scp sql_dump_file.sql  vagrant@127.0.0.1:/home/SQL_DUMPS/sql_dump_file.sql
+
+снять дамп базы с дев-сервера:
+
+mysqldump -P 3306 -h <server> -u <user> -p <db_name> >  dump_DB_.sql
+
+загрузить дамп базы на виртуалку (находясь на виртуалке)
+
+mysql -u [username] -p -h localhost [database] < db_backup.sql
+
+Создать нового юзверя:
+
+CREATE USER ‘username’@’localhost’ IDENTIFIED BY ‘password’;
+
+Дать все права для юзверя на таблицы в БД:
+
+ GRANT ALL ON database.* TO ‘user’@’localhost’;
+--------------------------------------------------------------------------------
+Сброс пароля MySQL
+
+service mysql stop
+mysqld_safe  --skip-grant-tables &
+mysql
+UPDATE mysql.user SET Password=PASSWORD('MyNewPass') WHERE User='root';
+FLUSH PRIVILEGES;
+service mysql stop
+#т.к. на виртуалке требует под root, то ч.з sudo
+sudo mysql -u root
+--------------------------------------------------------------------------------- 
+#generate ssh key
+ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+
+# run from terminal by hands
+eval "$(ssh-agent -s)"
+ssh-add /path/to/id_rsa
+
+_______________________________________________
+
+#add sym link
+ln -s /opt/foo /usr/bin/bar
+_______________________________________________
+
+#flush dns
+sudo systemd-resolve --flush-cache
+_______________________________________________
+
+#vagrant not connect shared folder in new system
+install  guest additionsl
+check  /etc/sudoers.d and write in same place:
+
+vagrant ALL=(ALL) NOPASSWD:ALL
+Defaults:vagrant !requiretty
+
+_________________________________________________
