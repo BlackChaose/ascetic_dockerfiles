@@ -1,0 +1,3 @@
+# run from terminal by hands
+eval "$(ssh-agent -s)"
+ssh-add /path/to/key
