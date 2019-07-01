@@ -13,3 +13,11 @@ sudo mkfs.vfat /dev/sdy1
 To set a file system label for your pen drive in the process:
 
 sudo mkfs.vfat -n 'name_for_your_pendrive' /dev/sdy1
+
+#add flag 4 boot
+
+sudo parted /dev/sdy1 set 1 boot on
+
+# 1 - partition for boot
+
+
