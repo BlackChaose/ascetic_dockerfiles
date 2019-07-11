@@ -1,0 +1,89 @@
+
+ниже пример конфига, настроить окна и сохранить layouts
+потом подключить заранее настроенные профили, и снова сохранить laoyts (menu item preferences from context ment)
+ниже кусок конфиги
+обратить внимание на то, что для того чтобы перейти в нужную директорию надо запускать команду типа "cd ~/CheatSheets/#my/scrpts; exec bash", т.е. запускать bash после. 
+также должа быть выбрана опция в профиле When command exits: Hold the terminal open
+
+в фйле Terminator IDE.desktop - примерный конфиг файла запуска консоли ( /usr/share/terminator/terminator -l T-800, где -l T-800 - запуск с layot "T-800")
+надо прописать путь к бинарнику и путь к файлу иконки.
+
+------------------------------------------------------------------
+[global_config]
+[keybindings]
+[layouts]
+  [[default]]
+    [[[child1]]]
+      parent = window0
+      profile = default
+      type = Terminal
+    [[[window0]]]
+      parent = ""
+      type = Window
+  [[T-800]]
+       [[[child1]]]
+      parent = window0
+      profile = default
+      type = Terminal
+    [[[window0]]]
+      parent = ""
+      type = Window
+[plugins]
+[profiles]
+  [[default]]
+    cursor_color = "#aaaaaa"
+  [[0x4e494b]]
+    cursor_color = "#aaaaaa"
+    custom_command = cd ~/DEV/; exec bash
+    font = Ubuntu 10
+    foreground_color = "#4e9a06"
+    palette = "#000000:#aa0000:#00aa00:#aa5500:#0000aa:#aa00aa:#00aaaa:#aaaaaa:#555555:#ff5555:#55ff55:#ffff55:#5555ff:#ff55ff:#55ffff:#ffffff"
+    use_custom_command = True
+  [[git]]
+    background_color = "#ffffff"
+    cursor_color = "#aaaaaa"
+    custom_command = cd ~/DEV/; exec bash
+    exit_action = hold
+    foreground_color = "#000000"
+    use_custom_command = True
+  [[run_eclipse]]
+    cursor_color = "#aaaaaa"
+    custom_command = sudo /opt/eclipse/eclipse
+    exit_action = restart
+    foreground_color = "#e53c00"
+    use_custom_command = True
+  [[scripts_1]]
+    background_color = "#282828"
+    cursor_color = "#aaaaaa"
+    custom_command = "cd ~/CheatSheets/#my/scrpts; exec bash"
+    exit_action = hold
+    foreground_color = "#ebdbb2"
+    use_custom_command = True
+  [[scripts_2]]
+    background_color = "#282828"
+    cursor_color = "#aaaaaa"
+    custom_command = "cd ~/CheatSheets/#my/scrpts; exec bash"
+    exit_action = hold
+    foreground_color = "#ebdbb2"
+    use_custom_command = True
+  [[scripts_3]]
+    background_color = "#282828"
+    cursor_color = "#aaaaaa"
+    custom_command = "cd ~/CheatSheets/#my/scrpts; exec bash"
+    exit_action = hold
+    foreground_color = "#ebdbb2"
+    use_custom_command = True
+  [[ssh1]]
+    background_color = "#ffffdd"
+    cursor_color = "#aaaaaa"
+    custom_command = ssh <username>@<server>
+    exit_action = restart
+    foreground_color = "#000000"
+    use_custom_command = True
+  [[ssh2]]
+    background_color = "#ffffdd"
+    cursor_color = "#aaaaaa"
+    custom_command = ssh-add ~/.ssh/4github/id-rsa
+    exit_action = hold
+    foreground_color = "#000000"
+    use_custom_command = True
