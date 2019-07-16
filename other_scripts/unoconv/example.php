@@ -37,8 +37,8 @@ function recursive($dir,$outdir)
 			Unoconv::convertToPdf($dir.DIRECTORY_SEPARATOR.$file, $outdir.DIRECTORY_SEPARATOR.$file); 
 			$countFiles++;
 		}
-         echo str_repeat('---', $deep).$dir.DIRECTORY_SEPARATOR.$file.'<br>';
-         //echo str_repeat('---', $deep).$file.'<br>';
+         //echo str_repeat('---', $deep).$dir.DIRECTORY_SEPARATOR.$file.'<br>';
+         echo str_repeat('---', $deep).$file.'<br>';
       }
  
       if (is_dir($dir.DIRECTORY_SEPARATOR.$file))
@@ -54,7 +54,7 @@ function recursive($dir,$outdir)
       return ['folders'=>$countDirs, 'files'=>$countFiles];
 }
 
-$dir='/home/kalitins/DEV/WORK_TMP/input';
-$output='/home/kalitins/DEV/WORK_TMP/output'; 
+$dir='/home/kalitins/DEV/WORK_TMP/17072019/output';
+$output='/home/kalitins/DEV/WORK_TMP/17072019/output_pdf'; 
 $arr=recursive($dir,$output);
 echo "папок: ".$arr['folders']." файлов: ".$arr['files']." <br>";
