@@ -1,0 +1,22 @@
+{
+    "name": "kalitins/fs_utility",
+    "description": "file system utility",
+    "type": "library",
+    "require": {
+		"php": ">=5.5.0"   ,
+        "tightenco/collect": "^5.8"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Nikita Kalitin",
+            "email": "nikita.s.kalitin@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "FSU\\": "src/"            
+        }
+    },
+    "minimum-stability": "dev"   
+}

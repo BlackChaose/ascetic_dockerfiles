@@ -1,0 +1,11 @@
+#create new table
+php artisan make:migration create_messages_table --create=messages
+
+#connect via ssh, and:
+/opt/php7.2/bin/php artisan migrate
+
+#rollback last
+php artisan migrate:rollback
+
+#create model
+php artisan make:model Flight

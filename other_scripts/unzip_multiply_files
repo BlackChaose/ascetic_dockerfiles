@@ -1,0 +1,3 @@
+unzip '*.zip' -d /home/user/folder/
+#or
+for i in *.rar; do mkdir "${i%%.rar}"; unrar x -r "$i" "${i%%.rar}"; done 
