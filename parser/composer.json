@@ -1,0 +1,19 @@
+{
+    "name": "blackchaose.cheatsheets/parser",
+    "description": "parser",
+    "type": "utility",
+    "license": "ISC",
+    "authors": [
+        {
+            "name": "nik",
+            "email": "nik@0x4e494b.ru"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {"zomberg/phpquery": "dev-master"},
+    "autoload": {
+        "psr-4": {
+            "Parser\\": "src/"            
+ 	        }
+   	 }
+}
