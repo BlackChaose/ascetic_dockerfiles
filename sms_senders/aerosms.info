@@ -1,0 +1,4 @@
+https://smsaero.ru/
+/*not recomended! Maybe search another service */
+/*документация не верна, используй это*/
+curl -u <email>:<api_ключ> 'https://gate.smsaero.ru/v2/sms/send?numbers[]=<79990001122>&numbers[]=<78880001122>&text=Добрый+день&sign=SMS Aero&channel=DIRECT'
