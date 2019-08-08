@@ -3,9 +3,9 @@ namespace FSU;
 use Tightenco\Collect;
 class Diff{
 	
-private $dir = '/home/kalitins/DEV/WORK_TMP/17072019/update/output_filter';
-private $dirInput = '/home/kalitins/DEV/WORK_TMP/17072019/update/input2';
-private $dirOutput = '/home/kalitins/DEV/WORK_TMP/17072019/update/output_filter_files';
+private $dir = '/home/kalitins/DEV/WORK_TMP/30072019/output_filter';
+private $dirInput = '/home/kalitins/DEV/WORK_TMP/30072019/input2';
+private $dirOutput = '/home/kalitins/DEV/WORK_TMP/30072019/output_filter_files';
 public function getArrs(){
 		
 	$file_1 = file_get_contents($this->dir.'/list1');
@@ -42,7 +42,7 @@ public function copyFiles($arrItems){
 					echo "file not copied!!!\n";
 					}
 				else {
-					echo "file ".$el."are copied!\n";
+					echo "file ".$el." are copied!\n";
 					$cnt+=1;
 					}
 			});

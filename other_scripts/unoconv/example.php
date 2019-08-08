@@ -54,7 +54,9 @@ function recursive($dir,$outdir)
       return ['folders'=>$countDirs, 'files'=>$countFiles];
 }
 
-$dir='/home/kalitins/DEV/WORK_TMP/17072019/output';
-$output='/home/kalitins/DEV/WORK_TMP/17072019/output_pdf'; 
+//$dir='/home/kalitins/DEV/WORK_TMP/17072019/output';
+$dir = '/home/kalitins/DEV/WORK_TMP/30072019_281_odt/source';
+//$output='/home/kalitins/DEV/WORK_TMP/17072019/output_pdf'; 
+$output='/home/kalitins/DEV/WORK_TMP/30072019_281_odt/source/out';
 $arr=recursive($dir,$output);
 echo "папок: ".$arr['folders']." файлов: ".$arr['files']." <br>";
