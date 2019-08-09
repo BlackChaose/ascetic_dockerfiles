@@ -21,3 +21,8 @@ with user login "penetrator" and user password "ohmygod!" and domain (MS AD) "da
 where <user name> - name of user's home directory.
 
 3) in network settings - if your company use MS ActiveDirectory - change DNS server to server AD (AD have DNS).
+
+4) 
+* if some errors
+sudo apt-get install cifs-utils
+sudo apt-get install nfs-common
