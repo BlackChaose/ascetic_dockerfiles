@@ -1,0 +1,7 @@
+#коммиты
+git log --pretty=format:"Commit Hash: %Cred%H%Creset, Author: %Cblue%aN%Creset, Date: %Cgreen%aD%Creset"
+#дерево
+git log --all --decorate --oneline --graph --date-order
+
+#всё вместе
+git log --all --decorate --oneline --graph --date-order --pretty=format:"Commit Hash: %Cred%H%Creset, Author: %Cblue%aN%Creset, Date: %Cgreen%aD%Creset"
