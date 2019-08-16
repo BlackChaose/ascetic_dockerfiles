@@ -5,3 +5,5 @@ git log --all --decorate --oneline --graph --date-order
 
 #всё вместе
 git log --all --decorate --oneline --graph --date-order --pretty=format:"Commit Hash: %Cred%H%Creset, Author: %Cblue%aN%Creset, Date: %Cgreen%aD%Creset"
+#
+git log --pretty=format:" hash: %C(dim yellow)%h%Creset, Au.: %C(dim green)%aN%Creset, cmtr: %C(green)%cN%Creset dt: %C(dim magenta)%aD%Creset mes: %C(red)%B%Creset" --graph

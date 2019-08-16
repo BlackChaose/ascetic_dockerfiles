@@ -1,0 +1,5 @@
+git config --global alias.co chekout
+git config --global alias.br branch
+git config --global alias.ci commit -v
+git config --global alias.st status
+git config --global alias.lgf 'log --pretty=format:" hash: %C(dim yellow)%h%Creset, Au.: %C(dim green)%aN%Creset, cmtr: %C(green)%cN%Creset dt: %C(dim magenta)%aD%Creset mes: %C(red)%B%Creset" --graph'
