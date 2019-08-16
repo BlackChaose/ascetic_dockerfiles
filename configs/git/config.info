@@ -1,0 +1,2 @@
+#use vim for define
+git config --global core.editor "vim"
