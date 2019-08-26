@@ -1,0 +1,4 @@
+#see:
+#https://docs.mitmproxy.org/stable/tools-mitmdump/
+#mitmproxy --mode reverse:<address>:<port> -p<local port on localhost>
+mitmproxy --mode reverse:http://localhost:4000 -p 4001
