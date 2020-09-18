@@ -1,0 +1,9 @@
+#!/bin/sh
+PHPRC="/opt/php5.3/"
+export PHPRC
+PHP_FCGI_CHILDREN=4
+export PHP_FCGI_CHILDREN
+PHP_FCGI_MAX_REQUESTS=5000
+export PHP_FCGI_MAX_REQUESTS
+export PDFLIBLICENSEFILE=/etc/pdflib/license
+exec /opt/php5.3/bin/php-cgi
